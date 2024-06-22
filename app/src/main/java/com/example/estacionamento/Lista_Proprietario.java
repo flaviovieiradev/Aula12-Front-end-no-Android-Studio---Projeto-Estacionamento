@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -35,6 +36,21 @@ public class Lista_Proprietario extends AppCompatActivity {
         lsproprietarios = findViewById(R.id.lvProprietarios);
         cliente = new AsyncHttpClient();
         carregaProprietarios();
+
+        // Encontra o botão voltar no layout
+        Button btn_prop_voltar = findViewById(R.id.btn_prop_voltar);
+
+        // Adiciona um listener de clique no botão voltar
+        btn_prop_voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Cria um novo Intent para abrir a SecondActivity
+                Intent intent = new Intent(Lista_Proprietario.this, tela_principal.class);
+
+                // Inicia a nova Activity
+                startActivity(intent);
+            }
+        });
     }
     //Fora do onCreate
 
