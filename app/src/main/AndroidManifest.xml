@@ -17,6 +17,12 @@
         android:theme="@style/Theme.Estacionamento"
         tools:targetApi="31">
         <activity
+            android:name=".Alterar"
+            android:exported="false" />
+        <activity
+            android:name=".Lista_Proprietario"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
